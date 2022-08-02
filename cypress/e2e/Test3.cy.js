@@ -56,7 +56,6 @@ describe('Teledoc Test Suite', function() {
                 if(text.includes("Novak"))
                 {
                     cy.get(':nth-child(4) > :nth-child(11) > .btn').click()
-                    //cy.wait(2000)
                     cy.get('.btn-primary').click();
                   }
                     
