@@ -18,7 +18,7 @@ describe('Teledoc Test Suite', function() {
         cy.get(':nth-child(3) > :nth-child(2) > .ng-pristine').type(testData.username)
         cy.get(':nth-child(4) > :nth-child(2) > .ng-pristine').type(testData.password)
         cy.get(':nth-child(2) > :nth-child(1) > .ng-pristine').click()
-        cy.get(':nth-child(6) > :nth-child(2) > .ng-pristine').select('Admin').should('have.value', '2')
+        cy.get('select').select('Admin').should('have.value', '2')
         cy.get(':nth-child(7) > :nth-child(2) > .ng-pristine').type(testData.email)
         cy.get(':nth-child(8) > :nth-child(2) > .ng-pristine').type(testData.phone)
         cy.get('.btn-success').click()

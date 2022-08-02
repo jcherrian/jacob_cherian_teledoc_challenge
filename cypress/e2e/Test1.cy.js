@@ -17,15 +17,31 @@ describe('Teledoc Test Suite', () => {
       cy.get(':nth-child(3) > :nth-child(2) > .ng-pristine').type('elonmusk')
       cy.get(':nth-child(4) > :nth-child(2) > .ng-pristine').type('thepassword')
       cy.get(':nth-child(2) > :nth-child(1) > .ng-pristine').click()
-      cy.get(':nth-child(6) > :nth-child(2) > .ng-pristine').select('Admin').should('have.value', '2')
+      cy.get('select').select('Admin').should('have.value', '2')
       cy.get(':nth-child(7) > :nth-child(2) > .ng-pristine').type('elonmusk@gmail.com')
       cy.get(':nth-child(8) > :nth-child(2) > .ng-pristine').type('123-456-7890')
       cy.get('.btn-success').click()
     })
 
     it('Validate New User', () => {
-      cy.get('.smart-table-global-search > .pull-right').type('Musk'); //Search
-      cy.get('.smart-table-data-row > td:nth-of-type(1)').should('have.text', 'Elon')
+      // cy.get('.smart-table-global-search > .pull-right').type('Musk'); //Search
+      // cy.get('.smart-table-data-row > td:nth-of-type(1)').should('have.text', 'Elon')
+      
+      cy.get('.smart-table-data-row > td:nth-of-type(1)').each(($e1, index, $list) => {
+ 
+        const text=$e1.text()
+        if(text.includes("Musk"))
+        {
+     
+            cy.get(".smart-table-data-row > td:nth-of-type(1)").eq(index).next().then(function(name)
+            {
+             const nameText=   name.text()
+             expect(nameText).to.equal('Elon')
+            })
+
+          }
+            
+       })
 
     })
   
