@@ -49,11 +49,7 @@ describe('Teledoc Test Suite', function() {
           })
         
           it('Delete User', () => { 
-            // cy.get('.smart-table-global-search > .pull-right').clear().type('Novak'); //Search 
-            // cy.get(':nth-child(11) > .btn').click();
-            // cy.get('.btn-primary').click();
-            // cy.reload()
-
+         
             cy.get('.smart-table-data-row > td:nth-of-type(2)').each(($e1, index, $list) => {
  
                 const text=$e1.text()
