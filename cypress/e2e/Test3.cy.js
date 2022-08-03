@@ -26,7 +26,7 @@ describe('Teledoc Test Suite', function() {
   
     it('Add New User', () => {
         homePage.addUser().click()
-        newuser.userFirsname().type(testData.firstname)
+        newuser.userFirstname().type(testData.firstname)
         newuser.userLastname().type(testData.lastname)
         newuser.userUsername().type(testData.username)
         newuser.userPassword().type(testData.password)

@@ -24,7 +24,7 @@ class Homepage
  validateAddUser()
 
  {
-   return cy.get('.smart-table-data-row > td:nth-of-type(2)').each(($e1, index, $list) => {
+   return cy.get('.smart-table-data-row > td:nth-of-type(1)').each(($e1, index, $list) => {
  
           const text=$e1.text()
           if(text.includes("Elon"))

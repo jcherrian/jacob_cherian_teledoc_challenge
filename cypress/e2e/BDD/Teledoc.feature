@@ -2,8 +2,9 @@ Feature: Validation of Teledoc Practise site
 
     Homework Assigment
 
-    Scenario: Scenario1
+    Scenario: Adding a new user
     Given I open practice site
-    When 
-    And 
-    Then 
+    When I click Add User
+    And Add User
+    Then Validate new User has been added
+

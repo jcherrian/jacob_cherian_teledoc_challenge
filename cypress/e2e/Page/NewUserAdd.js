@@ -1,7 +1,7 @@
 class NewUserAdd
 {
 
- userFirsname()
+ userFirstname()
  {
     return cy.get(':nth-child(1) > :nth-child(2) > .ng-pristine')
  }
