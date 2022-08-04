@@ -1,7 +1,9 @@
 import { Given,When,Then } from "cypress-cucumber-preprocessor/steps";
 import Homepage from '../../Page/HomePage'
 import NewUserAdd from '../../Page/NewUserAdd'
+import { slowCypressDown } from "cypress-slow-down";
 
+slowCypressDown()
 
 const homePage = new Homepage();
 const newuser = new NewUserAdd();

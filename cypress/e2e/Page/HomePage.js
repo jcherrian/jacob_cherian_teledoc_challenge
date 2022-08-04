@@ -4,7 +4,8 @@ class Homepage
  launch ()
  
  {
-   return cy.visit('https://www.way2automation.com/angularjs-protractor/webtables/') 
+
+    return cy.visit('/') 
 
  }
 
